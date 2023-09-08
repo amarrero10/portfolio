@@ -10,7 +10,7 @@ function Navbar() {
           <img src={logo} alt="logo" className=" h-14" />
         </Link>
       </div>
-      <div className=" w-1/6 flex justify-between items-center">
+      <div className=" md:w-1/6 sm:1/4 flex justify-between items-center">
         <button className=" hidden sm:block hover:underline hover:text-blurple text-lg">
           Resume
         </button>
