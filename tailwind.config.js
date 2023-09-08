@@ -3,13 +3,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
-      "Misty-Grey": "#c9c4c3",
-      "Midnight-Blue": "#282f4a",
-      "Deep-Blue": "#2f3d4b",
-      "Dusty-Rose": "#a28686",
-      Black: "#000",
+      sand: "#f8f2ed",
+      denim: "#1b2139",
+      blurple: "#4c4c8c",
+      cherry: "#d74e38",
     },
-
     plugins: [require("tailwindcss-animated")],
   },
 };

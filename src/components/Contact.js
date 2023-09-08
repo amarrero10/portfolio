@@ -54,7 +54,7 @@ function Contact() {
           </label>
           <input
             type="text"
-            required="true"
+            required
             id="name"
             className="px-1 mb-4 mt-2 py-2 text-Midnight-Blue"
             placeholder="Albert Marrero"
@@ -68,7 +68,7 @@ function Contact() {
           </label>
           <input
             type="email"
-            required="true"
+            required
             id="email"
             className="px-1 mb-4 mt-2 py-2 text-Midnight-Blue"
             placeholder="example@example.com"
@@ -82,7 +82,7 @@ function Contact() {
           </label>
           <textarea
             id="message"
-            required="true"
+            required
             className="px-1 mb-4 mt-2 py-2 text-Midnight-Blue"
             placeholder="Hey there! I'd love to chat about..."
             name="message"

@@ -1,23 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import Main from "./components/Main";
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="h-full">
+    <>
       <Navbar />
-      <div className="">
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Portfolio" element={<Portfolio />} />
-          <Route path="/Contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </div>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/resume" element={<Resume />} />
+        <Route exact path="/contact" element={<Contact />} />
+      </Routes>
+    </>
   );
 }
 
