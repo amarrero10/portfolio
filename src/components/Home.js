@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import picture from "../images/Professional-Pic.jpeg";
-import { BsFiletypeSql, BsLock } from "react-icons/bs";
+import { BsFiletypeSql, BsLock, BsMailbox } from "react-icons/bs";
 import {
   DiCode,
   DiHtml5,
@@ -38,6 +39,35 @@ import pledge from "../images/pledge-palooza-screenshot.png";
 import pristine from "../images/pristine-clean-screenshot.png";
 
 function Home() {
+  const form = useRef();
+  const [status, setStatus] = useState("Submit!");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const myEmail = "albert.marrero10@gmail.com";
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm("service_zlanr09", "template_nupgdxh", form.current, "jwLUixlerwVK9ReDL").then(
+      (result) => {
+        setStatus("Sent!");
+
+        setTimeout(() => {
+          setStatus("Submit!"); // Change the status back to "Submit!" after a delay
+        }, 2000);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+
+    setStatus("Sending...");
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
   return (
     <>
       <div className="w-screen px-2">
@@ -215,7 +245,7 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className=" mt-[2230px] sm:mt-[700px] w-screen px-2 py-10">
+      <div className=" mt-[2230px] sm:mt-[700px] w-screen h-fit px-2 py-10">
         <h1 className="text-center text-2xl font-bold">My Portfolio</h1>
         <p className="text-center text-lg">Please explore through my work below.</p>
 
@@ -238,19 +268,15 @@ function Home() {
                 information.
               </p>
               <div className=" flex w-3/4 justify-between sm:w-64">
-                <a
-                  href="https://cozynest.onrender.com" // Replace with the actual URL you want to link to
-                  target="_blank" // This attribute opens the link in a new tab or window
-                  rel="noopener noreferrer" // Important for security and performance
-                >
+                <a href="https://cozynest.onrender.com" target="_blank" rel="noopener noreferrer">
                   <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
                     Visit Here
                   </button>
                 </a>
                 <a
-                  href="https://github.com/amarrero10/CozyNest" // Replace with the actual URL you want to link to
-                  target="_blank" // This attribute opens the link in a new tab or window
-                  rel="noopener noreferrer" // Important for security and performance
+                  href="https://github.com/amarrero10/CozyNest"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
                     GitHub
@@ -268,30 +294,99 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className=" group h-[400px] rounded-md shadow-xl relative">
+
+          <div className="group h-[400px] rounded-md shadow-xl ">
             <img
               src={pledge}
-              className=" group-hover:hidden h-full w-full object-fit"
-              alt="pledge palooza website"
+              className=" group-hover:hidden h-full object-fit "
+              alt="cozy nest website"
             />
-            <div className="group-hover:visible invisible">
-              <h1>Pledge Palooza</h1>
-              <p>Pledge Palooza is a Kickstarter clone</p>
+            <div className="group-hover:visible group-hover:bg-blurple group-hover:text-sand sm:group-hover:h-full group-hover:h-[800px] invisible flex flex-col items-center sm:justify-between sm:py-2 px-3">
+              <h1 className="text-2xl sm:text-3xl">Pledge Palooza: a Kickstarter clone</h1>
+              <p className="text-justify">
+                Pledge Palooza is a dynamic full-stack application, inspired by Kickstarter and
+                created as a collaborative group project. Its foundation rests upon a Flask and
+                SQLAlchemy backend, orchestrated alongside a React frontend with captivating CSS
+                styling. Authenticated users hold the keys to project creation, shaping reward
+                tiers, and pledging support across diverse projects, all underpinned by PostgreSQL
+                and Alembic for robust data management. Meanwhile, guests can navigate a rich
+                landscape of projects and explore in-depth project details, immersing themselves in
+                the world of Pledge Palooza.
+              </p>
+              <div className=" flex w-3/4 justify-between sm:w-64">
+                <a
+                  href="https://pledgepalooza.onrender.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="invisible group-hover:visible text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
+                    Visit Here
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/LukeConnors/PledgePalooza"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry invisible group-hover:visible">
+                    GitHub
+                  </button>
+                </a>
+              </div>
+              <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+                <DiReact />
+                <SiFlask />
+                <BsFiletypeSql />
+                <DiPostgresql />
+                <DiCss3 />
+                <SiRender />
+              </div>
             </div>
           </div>
 
-          <div className="group h-[400px] rounded-md shadow-xl">
+          <div className="group h-[400px] rounded-md shadow-xl ">
             <img
               src={pristine}
-              className="h-full object-fit group-hover:hidden"
-              alt="pristine clean website"
+              className=" group-hover:hidden h-full object-fit "
+              alt="cozy nest website"
             />
-            <div className="invisible group-hover:visible ease-in-out">
-              <h1>Pristine Home Cleaning</h1>
-              <p>
-                This is a professional website for a house cleaning business. The website provides a
-                general overview of the company and provides a contact form.
+            <div className="group-hover:visible group-hover:bg-blurple group-hover:text-sand group-hover:h-full invisible flex flex-col items-center sm:justify-between sm:py-2 px-3">
+              <h1 className="text-2xl sm:text-3xl">Pristine Home Cleaning</h1>
+              <p className="text-justify">
+                Pristine Home Cleaning is a sleek, responsive website representing a professional
+                housekeeping service. Crafted with React and adorned with Tailwind CSS, this
+                platform exudes both style and functionality. It delivers a hassle-free experience
+                on all devices, including mobile. Discover an array of services and transparent
+                pricing options as you explore the site. When you're ready to book, our
+                user-friendly contact form awaits your service requests, ensuring a seamless
+                connection. Elegance meets convenience on Pristine Home Cleaning's website, where
+                cleanliness is a click away.
               </p>
+              <div className=" flex w-3/4 justify-between sm:w-64">
+                <a
+                  href="https://pristineclean.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="invisible group-hover:visible text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
+                    Visit Here
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/amarrero10/Housekeeping"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry invisible group-hover:visible">
+                    GitHub
+                  </button>
+                </a>
+              </div>
+              <div className="flex text-3xl w-1/2 mx-auto justify-between px-2 sm:w-1/3">
+                <DiReact />
+                <SiTailwindcss />
+                <SiNetlify />
+              </div>
             </div>
           </div>
 
@@ -310,6 +405,73 @@ function Home() {
               appoinment. It also has an admin dashboard where a user can check on the appointments.
             </p>
           </div>
+        </div>
+      </div>
+      <div className=" sm:w-6/12 w-screen px-2 mx-auto mt-10 pb-3">
+        <div className="w-full md:w-8/12 mx-auto">
+          <header className="text-center py-12 ">
+            <h2 className="text-3xl font-bold text-gray-900">Let's Connect!</h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Hey there! I'm thrilled to connect with you and explore exciting opportunities. Feel
+              free to reach out to me by filling out the form below, or if you prefer, shoot me an{" "}
+              <span className="font-bold underline">
+                <a href={`mailto:${myEmail}`} className="text-blue-500 hover:underline">
+                  email
+                </a>
+              </span>
+              . I'm always ready to dive into new projects and collaborations!
+            </p>
+          </header>
+          <form className="flex flex-col w-8/12 mx-auto pb-14" ref={form} onSubmit={handleSubmit}>
+            <label htmlFor="name" className=" text-xl">
+              Name:
+            </label>
+            <input
+              type="text"
+              required
+              id="name"
+              className="px-1 mb-4 mt-2 py-2 outline-cherry"
+              placeholder="Albert Marrero"
+              name="user_name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+
+            <label htmlFor="email" className=" text-xl">
+              Email:
+            </label>
+            <input
+              type="email"
+              required
+              id="email"
+              className="px-1 mb-4 mt-2 py-2 outline-cherry"
+              placeholder="example@example.com"
+              name="user_email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <label htmlFor="message" className=" text-xl">
+              Message:
+            </label>
+            <textarea
+              rows={4}
+              maxLength={2000}
+              id="message"
+              required
+              className="px-1 mb-4 mt-2 py-2 resize-none outline-cherry"
+              placeholder="Hey there! I'd love to chat about..."
+              name="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+            <button
+              type="submit"
+              className=" text-lg border border-cherry px-5 h-fit py-2 rounded-md text-cherry hover:bg-cherry hover:text-sand"
+            >
+              {status}
+            </button>
+          </form>
         </div>
       </div>
     </>

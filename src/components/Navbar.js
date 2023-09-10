@@ -14,9 +14,11 @@ function Navbar() {
         <button className=" hidden sm:block hover:underline hover:text-blurple text-lg">
           Resume
         </button>
-        <button className=" text-lg border border-cherry px-5 h-fit py-2 rounded-md text-cherry hover:bg-cherry hover:text-sand">
-          Say Hi 👋🏼
-        </button>
+        <Link to="/contact">
+          <button className=" text-lg border border-cherry px-5 h-fit py-2 rounded-md text-cherry hover:bg-cherry hover:text-sand">
+            Say Hi 👋🏼
+          </button>
+        </Link>
       </div>
     </div>
   );

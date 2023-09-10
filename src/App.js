@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/resume" element={<Resume />} />
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </>
   );
 }

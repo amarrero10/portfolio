@@ -33,7 +33,7 @@ function Contact() {
   };
 
   return (
-    <div className=" w-6/12 bg-Midnight-Blue mx-auto mt-20">
+    <div className=" sm:w-6/12 w-screen mx-auto mt-20">
       <div className="w-full md:w-8/12 mx-auto text-Misty-Grey">
         <header className="text-center py-12 ">
           <h2 className="text-3xl font-bold text-gray-900">Let's Connect!</h2>
@@ -49,51 +49,49 @@ function Contact() {
           </p>
         </header>
         <form className="flex flex-col w-8/12 mx-auto pb-14" ref={form} onSubmit={handleSubmit}>
-          <label htmlFor="name" className="text-Dusty-Rose text-xl">
+          <label htmlFor="name" className=" text-xl">
             Name:
           </label>
           <input
             type="text"
             required
             id="name"
-            className="px-1 mb-4 mt-2 py-2 text-Midnight-Blue"
+            className="px-1 mb-4 mt-2 py-2 outline-cherry"
             placeholder="Albert Marrero"
             name="user_name"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
 
-          <label htmlFor="email" className="text-Dusty-Rose text-xl">
+          <label htmlFor="email" className=" text-xl">
             Email:
           </label>
           <input
             type="email"
             required
             id="email"
-            className="px-1 mb-4 mt-2 py-2 text-Midnight-Blue"
+            className="px-1 mb-4 mt-2 py-2 outline-cherry"
             placeholder="example@example.com"
             name="user_email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <label htmlFor="message" className="text-Dusty-Rose text-xl">
+          <label htmlFor="message" className=" text-xl">
             Message:
           </label>
           <textarea
             id="message"
+            rows={4}
             required
-            className="px-1 mb-4 mt-2 py-2 text-Midnight-Blue"
+            className="px-1 mb-4 mt-2 py-2 outline-cherry resize-none"
             placeholder="Hey there! I'd love to chat about..."
             name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
 
-          <button
-            type="submit"
-            className={`text-xl border-solid border-Misty-Grey border-2 w-1/2 mx-auto rounded-full py-2 flex items-center justify-center `}
-          >
+          <button className=" text-lg border border-cherry px-5 h-fit py-2 rounded-md text-cherry hover:bg-cherry hover:text-sand">
             {status}
           </button>
         </form>
