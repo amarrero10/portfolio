@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import picture from "../images/Professional-Pic.jpeg";
-import { BsFiletypeSql, BsLock, BsMailbox } from "react-icons/bs";
+import { BsFiletypeSql, BsLock } from "react-icons/bs";
 import {
   DiCode,
   DiHtml5,
