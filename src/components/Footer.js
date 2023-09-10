@@ -5,12 +5,13 @@ import { RiTwitterXFill } from "react-icons/ri";
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <div className=" w-screen flex flex-col justify-between items-center mx-auto py-3 sm:h-[220px]  bg-cherry text-sand">
+    <div className="flex flex-col justify-between items-center mx-auto py-3 sm:h-[220px]  bg-cherry text-sand">
       <h1> &copy; {currentYear} Albert Marrero </h1>
 
       <div className="flex flex-col text-center justify-between w-1/3 mx-auto">
         <p>Open to relocation</p>
-        <p>Contact me at: albert.marrero10@gmail.com</p>
+        <p>Contact me at: </p>
+        <p>albert.marrero10@gmail.com</p>
       </div>
       <p className="text-center">Social Media Links:</p>
       <div className="w-1/3">

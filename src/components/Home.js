@@ -70,7 +70,7 @@ function Home() {
   };
   return (
     <>
-      <div className="w-screen px-2">
+      <div className=" px-2">
         <div className="mt-10">
           <h1 className="text-center text-2xl">Full-Stack Engineer & Tech Explorer</h1>
           <p className=" text-center text-lg">
@@ -84,7 +84,7 @@ function Home() {
           />
         </div>
       </div>
-      <div className=" h-fit bg-blurple text-sand w-screen mt-20 -z-10">
+      <div className=" h-fit bg-blurple text-sand mt-20 -z-10">
         <h1 className="text-center font-bold text-2xl pt-10">
           Hey there, I'm Albert. Pleasure to meet you!
         </h1>
@@ -96,7 +96,7 @@ function Home() {
           perspectives and innovative solutions to the ever-evolving tech landscape.
         </p>
       </div>
-      <div className="grid grid-cols-1 px-4 gap-8 sm:grid-cols-3 absolute -mt-12 w-screen z-10 mx-auto mb-12">
+      <div className="grid grid-cols-1 px-4 gap-8 sm:grid-cols-3 absolute -mt-12 z-10 mx-auto mb-12">
         <div className="text-center bg-sand shadow-xl rounded-md h-fit">
           <div className="h-20 w-20 mx-auto mt-3 rounded-full bg-denim">
             <DiCode className="text-center text-5xl h-20 mx-auto text-sand" />
@@ -245,7 +245,7 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className=" mt-[2230px] sm:mt-[700px] w-screen h-fit px-2 py-10">
+      <div className=" mt-[2230px] sm:mt-[700px] h-fit px-2 py-10">
         <h1 className="text-center text-2xl font-bold">My Portfolio</h1>
         <p className="text-center text-lg">Please explore through my work below.</p>
 
@@ -407,7 +407,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className=" sm:w-6/12 w-screen px-2 mx-auto mt-10 pb-3">
+      <div className=" sm:w-6/12  px-2 mx-auto mt-10 pb-3">
         <div className="w-full md:w-8/12 mx-auto">
           <header className="text-center py-12 ">
             <h2 className="text-3xl font-bold text-gray-900">Let's Connect!</h2>
