@@ -33,6 +33,9 @@ import {
   SiNetlify,
 } from "react-icons/si";
 import { BiUniversalAccess } from "react-icons/bi";
+import cozynest from "../images/cozy-nest-screenshot.png";
+import pledge from "../images/pledge-palooza-screenshot.png";
+import pristine from "../images/pristine-clean-screenshot.png";
 
 function Home() {
   return (
@@ -212,16 +215,101 @@ function Home() {
           </ul>
         </div>
       </div>
-      <div className=" mt-[2200px] sm:mt-[700px] w-screen px-2">
-        <h1 className="text-center">My Portfolio</h1>
-        <p className="text-center">Please explore through my work below.</p>
+      <div className=" mt-[2230px] sm:mt-[700px] w-screen px-2 py-10">
+        <h1 className="text-center text-2xl font-bold">My Portfolio</h1>
+        <p className="text-center text-lg">Please explore through my work below.</p>
 
-        <div>
-          <div>CozyNest</div>
-          <div>Pledge Palooza</div>
-          <div>Budget Buddy</div>
-          <div>Pristine Clean</div>
-          <div>Florida Medical Spa</div>
+        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="group h-[400px] rounded-md shadow-xl ">
+            <img
+              src={cozynest}
+              className=" group-hover:hidden h-full object-fit "
+              alt="cozy nest website"
+            />
+            <div className="group-hover:visible group-hover:bg-blurple group-hover:text-sand group-hover:h-full invisible flex flex-col items-center justify-between py-2 px-3">
+              <h1 className="text-2xl sm:text-3xl">CozyNest: an Airbnb clone</h1>
+              <p className="text-justify">
+                CozyNest is a robust full-stack application that leverages a backend powered by
+                Express and Node.js, supported by a PostgreSQL database managed through Sequelize.
+                On the frontend, React takes the lead, coupled with CSS for a polished design.
+                Authenticated users can create spots, explore the listings, access spot details,
+                leave reviews and ratings, and seamlessly book accommodations. For unauthenticated
+                users, CozyNest offers the ability to browse all spots and view detailed
+                information.
+              </p>
+              <div className=" flex w-3/4 justify-between sm:w-64">
+                <a
+                  href="https://cozynest.onrender.com" // Replace with the actual URL you want to link to
+                  target="_blank" // This attribute opens the link in a new tab or window
+                  rel="noopener noreferrer" // Important for security and performance
+                >
+                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
+                    Visit Here
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/amarrero10/CozyNest" // Replace with the actual URL you want to link to
+                  target="_blank" // This attribute opens the link in a new tab or window
+                  rel="noopener noreferrer" // Important for security and performance
+                >
+                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
+                    GitHub
+                  </button>
+                </a>
+              </div>
+              <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+                <DiReact />
+                <SiExpress />
+                <DiNodejs />
+                <SiSequelize />
+                <DiPostgresql />
+                <DiCss3 />
+                <SiRender />
+              </div>
+            </div>
+          </div>
+          <div className=" group h-[400px] rounded-md shadow-xl relative">
+            <img
+              src={pledge}
+              className=" group-hover:hidden h-full w-full object-fit"
+              alt="pledge palooza website"
+            />
+            <div className="group-hover:visible invisible">
+              <h1>Pledge Palooza</h1>
+              <p>Pledge Palooza is a Kickstarter clone</p>
+            </div>
+          </div>
+
+          <div className="group h-[400px] rounded-md shadow-xl">
+            <img
+              src={pristine}
+              className="h-full object-fit group-hover:hidden"
+              alt="pristine clean website"
+            />
+            <div className="invisible group-hover:visible ease-in-out">
+              <h1>Pristine Home Cleaning</h1>
+              <p>
+                This is a professional website for a house cleaning business. The website provides a
+                general overview of the company and provides a contact form.
+              </p>
+            </div>
+          </div>
+
+          <div className=" h-[400px]  rounded-md shadow-xl">
+            <h1>Budget Buddy</h1>
+            <p>
+              Budget Buddy is a personal project made for my family and friends as a tool to use for
+              managing your money. It's a tool used for budgeting, savings, and bills
+            </p>
+          </div>
+          <div className=" h-[400px]  rounded-md shadow-xl">
+            <h1>Florida Medical Spa</h1>
+            <p>
+              This is a professional website for an aesthetic/weight loss business that provides a
+              general overview of their services as well as contact form and the ability to book an
+              appoinment. It also has an admin dashboard where a user can check on the appointments.
+            </p>
+          </div>
         </div>
       </div>
     </>
