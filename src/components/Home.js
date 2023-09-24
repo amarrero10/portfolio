@@ -390,21 +390,21 @@ function Home() {
             </div>
           </div>
 
-          <div className=" h-[400px]  rounded-md shadow-xl">
+          {/* <div className=" h-[400px]  rounded-md shadow-xl">
             <h1>Budget Buddy</h1>
             <p>
               Budget Buddy is a personal project made for my family and friends as a tool to use for
               managing your money. It's a tool used for budgeting, savings, and bills
             </p>
-          </div>
-          <div className=" h-[400px]  rounded-md shadow-xl">
+          </div> */}
+          {/* <div className=" h-[400px]  rounded-md shadow-xl">
             <h1>Florida Medical Spa</h1>
             <p>
               This is a professional website for an aesthetic/weight loss business that provides a
               general overview of their services as well as contact form and the ability to book an
               appoinment. It also has an admin dashboard where a user can check on the appointments.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className=" sm:w-6/12  px-2 mx-auto mt-10 pb-3">
