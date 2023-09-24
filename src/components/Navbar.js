@@ -11,9 +11,15 @@ function Navbar() {
         </Link>
       </div>
       <div className=" md:w-1/6 sm:1/4 flex justify-between items-center">
-        <button className=" hidden sm:block hover:underline hover:text-blurple text-lg">
-          Resume
-        </button>
+        <a
+          href="https://docs.google.com/document/d/1hs4EUcQC2Ki3npJKCCwj43yyOj5s62qd/edit?usp=sharing&ouid=110756131260014420215&rtpof=true&sd=true"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className=" hidden sm:block hover:underline hover:text-blurple text-lg">
+            Resume
+          </button>
+        </a>
         <Link to="/contact">
           <button className=" text-lg border border-cherry px-5 h-fit py-2 rounded-md text-cherry hover:bg-cherry hover:text-sand">
             Say Hi 👋🏼
