@@ -253,8 +253,8 @@ function Home() {
           Please explore through my work below.
         </p>
         {/* DESKTOP PORTFOLIO */}
-        <div className="hidden mt-5 sm:grid grid-cols-1 sm:grid-cols-3 gap-5 sm:w-3/4 sm:mx-auto">
-          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
+        <div className="hidden mt-5 sm:grid grid-cols-2 gap-5  ">
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] mx-auto ">
             <img
               src={cozynest}
               className=" group-hover:hidden h-full object-fit "
@@ -299,7 +299,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] mx-auto ">
             <img
               src={pledge}
               className=" group-hover:hidden h-full object-fit "
@@ -348,7 +348,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] mx-auto ">
             <img
               src={pristine}
               className=" group-hover:hidden h-full object-fit "
@@ -394,7 +394,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] mx-auto ">
             <img
               src={budget}
               className=" group-hover:hidden h-full object-fit "
@@ -443,7 +443,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] mx-auto ">
             <img
               src={FMPM}
               className=" group-hover:hidden h-full object-fit "
