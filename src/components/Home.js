@@ -37,6 +37,8 @@ import { BiUniversalAccess } from "react-icons/bi";
 import cozynest from "../images/cozy-nest-screenshot.png";
 import pledge from "../images/pledge-palooza-screenshot.png";
 import pristine from "../images/pristine-clean-screenshot.png";
+import budget from "../images/budget-buddy.png";
+import FMPM from "../images/FMPM.png";
 
 function Home() {
   const form = useRef();
@@ -246,11 +248,13 @@ function Home() {
         </div>
       </div>
       <div className=" mt-[2230px] sm:mt-[700px] h-fit px-2 py-10">
-        <h1 className="text-center text-2xl font-bold">My Portfolio</h1>
-        <p className="text-center text-lg">Please explore through my work below.</p>
-
-        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div className="group h-[400px] rounded-md shadow-xl ">
+        <h1 className="text-center text-2xl font-bold sm:w-2/3 sm:mx-auto">My Portfolio</h1>
+        <p className="text-center text-lg  sm:w-2/3 sm:mx-auto">
+          Please explore through my work below.
+        </p>
+        {/* DESKTOP PORTFOLIO */}
+        <div className="hidden mt-5 sm:grid grid-cols-1 sm:grid-cols-3 gap-5 sm:w-3/4 sm:mx-auto">
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
             <img
               src={cozynest}
               className=" group-hover:hidden h-full object-fit "
@@ -295,7 +299,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="group h-[400px] rounded-md shadow-xl ">
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
             <img
               src={pledge}
               className=" group-hover:hidden h-full object-fit "
@@ -344,7 +348,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="group h-[400px] rounded-md shadow-xl ">
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
             <img
               src={pristine}
               className=" group-hover:hidden h-full object-fit "
@@ -390,24 +394,320 @@ function Home() {
             </div>
           </div>
 
-          {/* <div className=" h-[400px]  rounded-md shadow-xl">
-            <h1>Budget Buddy</h1>
-            <p>
-              Budget Buddy is a personal project made for my family and friends as a tool to use for
-              managing your money. It's a tool used for budgeting, savings, and bills
-            </p>
-          </div> */}
-          {/* <div className=" h-[400px]  rounded-md shadow-xl">
-            <h1>Florida Medical Spa</h1>
-            <p>
-              This is a professional website for an aesthetic/weight loss business that provides a
-              general overview of their services as well as contact form and the ability to book an
-              appoinment. It also has an admin dashboard where a user can check on the appointments.
-            </p>
-          </div> */}
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
+            <img
+              src={budget}
+              className=" group-hover:hidden h-full object-fit "
+              alt="cozy nest website"
+            />
+            <div className="group-hover:visible group-hover:bg-blurple group-hover:text-sand group-hover:h-full invisible flex flex-col items-center justify-between py-2 px-3">
+              <h1 className="text-2xl sm:text-3xl">Budget Buddy: Your personal finance tool</h1>
+              <p className="text-justify">
+                Budget Buddy is your trusted personal finance companion. With top-notch security
+                features, this full-stack app, driven by Express, Node.js, and a secure PostgreSQL
+                database, safeguards your financial data. Featuring a sleek React frontend and
+                polished CSS design, Budget Buddy offers an intuitive user experience. Authenticated
+                users can effortlessly create budgets, track bills, set savings goals, and receive
+                payment reminders. It's the go-to tool for friends and family actively managing
+                their finances.
+              </p>
+              <div className=" flex w-3/4 justify-between sm:w-64">
+                <a
+                  href="https://budgetbuddy-othz.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
+                    Visit Here
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/amarrero10/Budget-Buddy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
+                    GitHub
+                  </button>
+                </a>
+              </div>
+              <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+                <DiReact />
+                <SiExpress />
+                <DiNodejs />
+                <SiSequelize />
+                <DiPostgresql />
+                <DiCss3 />
+                <SiRender />
+              </div>
+            </div>
+          </div>
+
+          <div className="group h-[400px] rounded-md shadow-xl w-[600px] ">
+            <img
+              src={FMPM}
+              className=" group-hover:hidden h-full object-fit "
+              alt="cozy nest website"
+            />
+            <div className="group-hover:visible group-hover:bg-blurple group-hover:text-sand group-hover:h-full invisible flex flex-col items-center justify-between py-2 px-3">
+              <h1 className="text-2xl sm:text-2xl">FMPM Wellness: A medical weight loss clinic</h1>
+              <p className="text-justify">
+                Explore a robust online platform for a Medical Weight Loss Clinic, designed to cater
+                to monthly visitors. This website is built on a secure full-stack architecture,
+                utilizing Express, Node.js, and PostgreSQL to ensure data security. The frontend,
+                developed using React and enhanced with TailwindCSS, offers an intuitive interface
+                for comprehensive clinic information. Additionally, this versatile website has the
+                potential for future enhancements such as appointment booking and an admin
+                dashboard, all thanks to its shared backend. Authenticated users will have access to
+                advanced features, making it a valuable resource for both visitors seeking clinic
+                details and those looking to manage their health and wellness effectively.
+              </p>
+              <div className=" flex w-3/4 justify-between sm:w-64">
+                <a
+                  href="https://fmpm-wellness.onrender.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
+                    Visit Here
+                  </button>
+                </a>
+                <a
+                  href="https://github.com/amarrero10/aesthetic-medical-website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
+                    GitHub
+                  </button>
+                </a>
+              </div>
+              <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+                <DiReact />
+                <SiExpress />
+                <DiNodejs />
+                <SiSequelize />
+                <DiPostgresql />
+                <DiCss3 />
+                <SiRender />
+              </div>
+            </div>
+          </div>
         </div>
+        {/* END DESKTOP PORTFOLIO */}
+        {/* MOBILE PORTFOLIO */}
+        <div className="sm:hidden block rounded-md shadow-xl border border-cherry mb-8 mt-4 ">
+          <div className="  sm:invisible flex flex-col items-center justify-between py-2 px-3">
+            <h1 className="text-2xl text-center">CozyNest: an Airbnb clone</h1>
+            <p className="text-justify">
+              CozyNest is a robust full-stack application that leverages a backend powered by
+              Express and Node.js, supported by a PostgreSQL database managed through Sequelize. On
+              the frontend, React takes the lead, coupled with CSS for a polished design.
+              Authenticated users can create spots, explore the listings, access spot details, leave
+              reviews and ratings, and seamlessly book accommodations. For unauthenticated users,
+              CozyNest offers the ability to browse all spots and view detailed information.
+            </p>
+            <div className=" flex justify-between py-10 w-3/4">
+              <a href="https://cozynest.onrender.com" target="_blank" rel="noopener noreferrer">
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  Visit Here
+                </button>
+              </a>
+              <a
+                href="https://github.com/amarrero10/CozyNest"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  GitHub
+                </button>
+              </a>
+            </div>
+            <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+              <DiReact />
+              <SiExpress />
+              <DiNodejs />
+              <SiSequelize />
+              <DiPostgresql />
+              <DiCss3 />
+              <SiRender />
+            </div>
+          </div>
+        </div>
+        <div className="sm:hidden block rounded-md shadow-xl border border-cherry mb-8 ">
+          <div className="  sm:invisible flex flex-col items-center justify-between py-2 px-3">
+            <h1 className="text-2xl text-center">Pledge Palooza: a Kickstarter clone</h1>
+            <p className="text-justify">
+              Pledge Palooza is a dynamic full-stack application, inspired by Kickstarter and
+              created as a collaborative group project. Its foundation rests upon a Flask and
+              SQLAlchemy backend, orchestrated alongside a React frontend with captivating CSS
+              styling. Authenticated users hold the keys to project creation, shaping reward tiers,
+              and pledging support across diverse projects, all underpinned by PostgreSQL and
+              Alembic for robust data management. Meanwhile, guests can navigate a rich landscape of
+              projects and explore in-depth project details, immersing themselves in the world of
+              Pledge Palooza.
+            </p>
+            <div className=" flex justify-between py-10 w-3/4">
+              <a
+                href="https://pledgepalooza.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  Visit Here
+                </button>
+              </a>
+              <a
+                href="https://github.com/LukeConnors/PledgePalooza"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  GitHub
+                </button>
+              </a>
+            </div>
+            <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+              <DiReact />
+              <SiFlask />
+              <BsFiletypeSql />
+              <DiPostgresql />
+              <DiCss3 />
+              <SiRender />
+            </div>
+          </div>
+        </div>
+        <div className="sm:hidden block rounded-md shadow-xl border border-cherry mb-8 ">
+          <div className="  sm:invisible flex flex-col items-center justify-between py-2 px-3">
+            <h1 className="text-2xl text-center">Pristine Home Cleaning</h1>
+            <p className="text-justify">
+              Pristine Home Cleaning is a sleek, responsive website representing a professional
+              housekeeping service. Crafted with React and adorned with Tailwind CSS, this platform
+              exudes both style and functionality. It delivers a hassle-free experience on all
+              devices, including mobile. Discover an array of services and transparent pricing
+              options as you explore the site. When you're ready to book, our user-friendly contact
+              form awaits your service requests, ensuring a seamless connection. Elegance meets
+              convenience on Pristine Home Cleaning's website, where cleanliness is a click away.
+            </p>
+            <div className=" flex justify-between py-10 w-3/4">
+              <a
+                href="https://pristineclean.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  Visit Here
+                </button>
+              </a>
+              <a
+                href="https://github.com/amarrero10/Housekeeping"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  GitHub
+                </button>
+              </a>
+            </div>
+            <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+              <DiReact />
+              <SiTailwindcss />
+              <SiNetlify />
+            </div>
+          </div>
+        </div>
+        <div className="sm:hidden block rounded-md shadow-xl border border-cherry mb-8 ">
+          <div className="  sm:invisible flex flex-col items-center justify-between py-2 px-3">
+            <h1 className="text-2xl text-center">Budget Buddy: Your personal finance tool</h1>
+            <p className="text-justify">
+              Budget Buddy is your trusted personal finance companion. With top-notch security
+              features, this full-stack app, driven by Express, Node.js, and a secure PostgreSQL
+              database, safeguards your financial data. Featuring a sleek React frontend and
+              polished CSS design, Budget Buddy offers an intuitive user experience. Authenticated
+              users can effortlessly create budgets, track bills, set savings goals, and receive
+              payment reminders. It's the go-to tool for friends and family actively managing their
+              finances.
+            </p>
+            <div className=" flex justify-between py-10 w-3/4">
+              <a
+                href="https://budgetbuddy-othz.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  Visit Here
+                </button>
+              </a>
+              <a
+                href="https://github.com/amarrero10/Budget-Buddy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  GitHub
+                </button>
+              </a>
+            </div>
+            <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+              <DiReact />
+              <SiExpress />
+              <DiNodejs />
+              <SiSequelize />
+              <DiPostgresql />
+              <DiCss3 />
+              <SiRender />
+            </div>
+          </div>
+        </div>
+
+        <div className="sm:hidden block rounded-md shadow-xl border border-cherry mb-8 ">
+          <div className="  sm:invisible flex flex-col items-center justify-between py-2 px-3">
+            <h1 className="text-2xl text-center">FMPM Wellness: A medical weight loss clinic</h1>
+            <p className="text-justify">
+              Explore a robust online platform for a Medical Weight Loss Clinic, designed to cater
+              to monthly visitors. This website is built on a secure full-stack architecture,
+              utilizing Express, Node.js, and PostgreSQL to ensure data security. The frontend,
+              developed using React and enhanced with TailwindCSS, offers an intuitive interface for
+              comprehensive clinic information. Additionally, this versatile website has the
+              potential for future enhancements such as appointment booking and an admin dashboard,
+              all thanks to its shared backend. Authenticated users will have access to advanced
+              features, making it a valuable resource for both visitors seeking clinic details and
+              those looking to manage their health and wellness effectively.
+            </p>
+            <div className=" flex justify-between py-10 w-3/4">
+              <a
+                href="https://fmpm-wellness.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  Visit Here
+                </button>
+              </a>
+              <a
+                href="https://github.com/amarrero10/aesthetic-medical-website"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
+                  GitHub
+                </button>
+              </a>
+            </div>
+            <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
+              <DiReact />
+              <SiExpress />
+              <DiNodejs />
+              <SiSequelize />
+              <DiPostgresql />
+              <SiTailwindcss />
+              <SiRender />
+            </div>
+          </div>
+        </div>
+        {/* END MOBILE PORTFOLIO */}
       </div>
-      <div className=" sm:w-6/12  px-2 mx-auto mt-10 pb-3">
+      <div className=" sm:w-6/12  px-2 mx-auto sm:mt-10 -mt-10 pb-3">
         <div className="w-full md:w-8/12 mx-auto">
           <header className="text-center py-12 ">
             <h2 className="text-3xl font-bold text-gray-900">Let's Connect!</h2>
