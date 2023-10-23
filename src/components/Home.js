@@ -36,7 +36,6 @@ import {
 import { BiUniversalAccess } from "react-icons/bi";
 import cozynest from "../images/cozy-nest-screenshot.png";
 import pledge from "../images/pledge-palooza-screenshot.png";
-import pristine from "../images/pristine-clean-screenshot.png";
 import budget from "../images/budget-buddy.png";
 import FMPM from "../images/FMPM.png";
 
@@ -350,52 +349,6 @@ function Home() {
 
           <div className="group h-[400px] rounded-md shadow-xl w-[600px] mx-auto ">
             <img
-              src={pristine}
-              className=" group-hover:hidden h-full object-fit "
-              alt="cozy nest website"
-            />
-            <div className="group-hover:visible group-hover:bg-blurple group-hover:text-sand group-hover:h-full invisible flex flex-col items-center sm:justify-between sm:py-2 px-3">
-              <h1 className="text-2xl sm:text-3xl">Pristine Home Cleaning</h1>
-              <p className="text-justify">
-                Pristine Home Cleaning is a sleek, responsive website representing a professional
-                housekeeping service. Crafted with React and adorned with Tailwind CSS, this
-                platform exudes both style and functionality. It delivers a hassle-free experience
-                on all devices, including mobile. Discover an array of services and transparent
-                pricing options as you explore the site. When you're ready to book, our
-                user-friendly contact form awaits your service requests, ensuring a seamless
-                connection. Elegance meets convenience on Pristine Home Cleaning's website, where
-                cleanliness is a click away.
-              </p>
-              <div className=" flex w-3/4 justify-between sm:w-64">
-                <a
-                  href="https://pristineclean.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="invisible group-hover:visible text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry">
-                    Visit Here
-                  </button>
-                </a>
-                <a
-                  href="https://github.com/amarrero10/Housekeeping"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="text-lg border border-sand px-5 h-fit py-2 rounded-md text-sand hover:bg-cherry hover:text-sand hover:border-cherry invisible group-hover:visible">
-                    GitHub
-                  </button>
-                </a>
-              </div>
-              <div className="flex text-3xl w-1/2 mx-auto justify-between px-2 sm:w-1/3">
-                <DiReact />
-                <SiTailwindcss />
-                <SiNetlify />
-              </div>
-            </div>
-          </div>
-
-          <div className="group h-[400px] rounded-md shadow-xl w-[600px] mx-auto ">
-            <img
               src={budget}
               className=" group-hover:hidden h-full object-fit "
               alt="cozy nest website"
@@ -577,45 +530,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="sm:hidden block rounded-md shadow-xl border border-cherry mb-8 ">
-          <div className="  sm:invisible flex flex-col items-center justify-between py-2 px-3">
-            <h1 className="text-2xl text-center">Pristine Home Cleaning</h1>
-            <p className="text-justify">
-              Pristine Home Cleaning is a sleek, responsive website representing a professional
-              housekeeping service. Crafted with React and adorned with Tailwind CSS, this platform
-              exudes both style and functionality. It delivers a hassle-free experience on all
-              devices, including mobile. Discover an array of services and transparent pricing
-              options as you explore the site. When you're ready to book, our user-friendly contact
-              form awaits your service requests, ensuring a seamless connection. Elegance meets
-              convenience on Pristine Home Cleaning's website, where cleanliness is a click away.
-            </p>
-            <div className=" flex justify-between py-10 w-3/4">
-              <a
-                href="https://pristineclean.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
-                  Visit Here
-                </button>
-              </a>
-              <a
-                href="https://github.com/amarrero10/Housekeeping"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="text-lg border border-cherry bg-cherry px-5 h-fit py-2 rounded-md text-sand  ">
-                  GitHub
-                </button>
-              </a>
-            </div>
-            <div className="flex text-3xl w-full mx-auto justify-between px-2 sm:w-1/2">
-              <DiReact />
-              <SiTailwindcss />
-              <SiNetlify />
-            </div>
-          </div>
-        </div>
+
         <div className="sm:hidden block rounded-md shadow-xl border border-cherry mb-8 ">
           <div className="  sm:invisible flex flex-col items-center justify-between py-2 px-3">
             <h1 className="text-2xl text-center">Budget Buddy: Your personal finance tool</h1>
