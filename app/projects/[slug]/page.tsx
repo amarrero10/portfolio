@@ -172,12 +172,12 @@ const PROJECTS: Record<
         { hex: "#8B5CF6", name: "Violet" },
         { hex: "#D4D0C8", name: "Stone" },
       ],
-      fontHeading: "Syne",
-      fontBody: "Onest",
+      fontHeading: "Space Grotesk",
+      fontBody: "Inter",
       fontHeadingDesc:
-        "Geometric, variable-weight display font for bold editorial presence.",
+        "Geometric display font with a technical edge, used SemiBold for strong editorial presence.",
       fontBodyDesc:
-        "Modern, legible sans-serif with personality for long-form reading.",
+        "Clean, highly legible sans-serif for body text and UI elements.",
     },
     mockupImages: [
       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800",
@@ -229,7 +229,9 @@ export default function ProjectPage() {
   const bg = "var(--clr-black)";
   const bgAlt = "var(--clr-light-black)";
   const clrGreen = "var(--clr-green)";
-  const clrWhite = "var(--clr-white)";
+  const clrTitle = "var(--clr-title)";
+  const clrText = "var(--clr-text)";
+  const clrText2 = "var(--clr-text-2)";
   const border = "1px solid var(--clr-border)";
   const ff1 = "var(--ff-1)";
   const ff2 = "var(--ff-2)";
@@ -240,7 +242,7 @@ export default function ProjectPage() {
         background: bg,
         minHeight: "100vh",
         fontFamily: ff1,
-        color: clrWhite,
+        color: clrText,
       }}
     >
       <style>{`
@@ -263,6 +265,7 @@ export default function ProjectPage() {
           }
         }
       `}</style>
+
       {/* ── NAV ── */}
       <nav
         style={{
@@ -275,23 +278,13 @@ export default function ProjectPage() {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "1.25rem clamp(1.5rem, 5vw, 4rem)",
-          background: "rgba(2,2,2,0.85)",
+          background: "rgba(225,215,201,0.92)",
           backdropFilter: "blur(14px)",
           borderBottom: border,
         }}
       >
-        <Link
-          href="/"
-          style={{
-            fontFamily: ff2,
-            fontSize: "0.85rem",
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            color: clrWhite,
-            textDecoration: "none",
-          }}
-        >
-          AM<span style={{ color: clrGreen }}>.</span>
+        <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+          <img src="/logo.png" alt="Marrero Web Studio" style={{ height: "54px", width: "auto" }} />
         </Link>
         <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
           <Link
@@ -299,7 +292,7 @@ export default function ProjectPage() {
             style={{
               fontFamily: ff1,
               fontSize: "0.72rem",
-              color: "rgba(255,255,255,0.45)",
+              color: clrText2,
               textTransform: "uppercase",
               letterSpacing: "0.1em",
               textDecoration: "none",
@@ -353,7 +346,7 @@ export default function ProjectPage() {
               style={{
                 width: "1.5rem",
                 height: "1px",
-                background: "rgba(255,255,255,0.2)",
+                background: "var(--clr-border)",
                 display: "block",
               }}
             />
@@ -362,7 +355,7 @@ export default function ProjectPage() {
                 fontSize: "0.68rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.4)",
+                color: clrText2,
                 fontFamily: ff2,
               }}
             >
@@ -372,7 +365,7 @@ export default function ProjectPage() {
               style={{
                 width: "1.5rem",
                 height: "1px",
-                background: "rgba(255,255,255,0.2)",
+                background: "var(--clr-border)",
                 display: "block",
               }}
             />
@@ -385,7 +378,7 @@ export default function ProjectPage() {
               letterSpacing: "-0.02em",
               textTransform: "uppercase",
               marginBottom: "1rem",
-              color: clrWhite,
+              color: clrTitle,
             }}
           >
             {project.title}
@@ -393,7 +386,7 @@ export default function ProjectPage() {
           <p
             style={{
               fontSize: "1rem",
-              color: "rgba(255,255,255,0.45)",
+              color: clrText2,
               maxWidth: "40ch",
               margin: "0 auto 2.5rem",
               lineHeight: 1.65,
@@ -419,7 +412,7 @@ export default function ProjectPage() {
                   letterSpacing: "0.1em",
                   border: border,
                   padding: "0.3em 0.85em",
-                  color: "rgba(255,255,255,0.4)",
+                  color: clrText2,
                   fontFamily: ff2,
                 }}
               >
@@ -485,7 +478,7 @@ export default function ProjectPage() {
                 style={{
                   fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)",
                   lineHeight: 1.8,
-                  color: "rgba(255,255,255,0.7)",
+                  color: clrText,
                   marginBottom: "1.75rem",
                 }}
               >
@@ -497,7 +490,7 @@ export default function ProjectPage() {
                 style={{
                   fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)",
                   lineHeight: 1.8,
-                  color: "rgba(255,255,255,0.7)",
+                  color: clrText,
                   marginBottom: "4.5rem",
                 }}
               >
@@ -513,7 +506,7 @@ export default function ProjectPage() {
                   fontFamily: ff2,
                   textTransform: "uppercase",
                   letterSpacing: "0.2em",
-                  color: "rgba(255,255,255,0.3)",
+                  color: clrText2,
                   marginBottom: "1rem",
                 }}
               >
@@ -529,10 +522,10 @@ export default function ProjectPage() {
                       textTransform: "uppercase",
                       letterSpacing: "0.08em",
                       padding: "0.5em 1.2em",
-                      background: "rgba(121,243,182,0.08)",
-                      border: "1px solid rgba(121,243,182,0.2)",
-                      color: clrGreen,
-                      borderRadius: "9999px",
+                      background: "rgba(154,181,92,0.12)",
+                      border: "1px solid rgba(154,181,92,0.35)",
+                      color: "var(--clr-dark-green)",
+                      borderRadius: "0",
                     }}
                   >
                     {skill}
@@ -557,7 +550,7 @@ export default function ProjectPage() {
               borderRadius: "1.5rem",
               overflow: "hidden",
               border: border,
-              boxShadow: "0 40px 100px rgba(0,0,0,0.5)",
+              boxShadow: "0 40px 100px rgba(28,28,30,0.15)",
               maxWidth: "1200px",
               margin: "0 auto",
               aspectRatio: "16/9",
@@ -602,7 +595,7 @@ export default function ProjectPage() {
                 fontSize: "clamp(1.8rem, 4vw, 3rem)",
                 textTransform: "uppercase",
                 letterSpacing: "-0.01em",
-                color: clrWhite,
+                color: clrTitle,
                 marginBottom: "2rem",
                 lineHeight: 1.05,
               }}
@@ -621,7 +614,7 @@ export default function ProjectPage() {
                 style={{
                   fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)",
                   lineHeight: 1.8,
-                  color: "rgba(255,255,255,0.55)",
+                  color: clrText,
                 }}
               >
                 The visual direction draws from the intersection of precision
@@ -634,7 +627,7 @@ export default function ProjectPage() {
                 style={{
                   fontSize: "clamp(0.95rem, 1.5vw, 1.1rem)",
                   lineHeight: 1.8,
-                  color: "rgba(255,255,255,0.55)",
+                  color: clrText,
                 }}
               >
                 Inspiration came from archival print design and editorial
@@ -654,7 +647,7 @@ export default function ProjectPage() {
                 fontSize: "0.7rem",
                 textTransform: "uppercase",
                 letterSpacing: "0.18em",
-                color: "rgba(255,255,255,0.3)",
+                color: clrText2,
                 marginBottom: "1.5rem",
               }}
             >
@@ -696,7 +689,7 @@ export default function ProjectPage() {
                       fontFamily: ff2,
                       letterSpacing: "0.08em",
                       textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.6)",
+                      color: clrText,
                       textAlign: "center",
                     }}
                   >
@@ -707,7 +700,7 @@ export default function ProjectPage() {
                       fontSize: "0.65rem",
                       fontFamily: ff2,
                       letterSpacing: "0.04em",
-                      color: "rgba(255,255,255,0.3)",
+                      color: clrText2,
                       textAlign: "center",
                     }}
                   >
@@ -726,7 +719,7 @@ export default function ProjectPage() {
                 fontSize: "0.7rem",
                 textTransform: "uppercase",
                 letterSpacing: "0.18em",
-                color: "rgba(255,255,255,0.3)",
+                color: clrText2,
                 marginBottom: "1.5rem",
               }}
             >
@@ -757,7 +750,7 @@ export default function ProjectPage() {
                     padding: "2.5rem",
                     border: border,
                     borderRadius: "1rem",
-                    background: "rgba(255,255,255,0.025)",
+                    background: "rgba(28,28,30,0.05)",
                   }}
                 >
                   <p
@@ -766,7 +759,7 @@ export default function ProjectPage() {
                       fontFamily: ff2,
                       textTransform: "uppercase",
                       letterSpacing: "0.16em",
-                      color: "rgba(255,255,255,0.3)",
+                      color: clrText2,
                       marginBottom: "0.9rem",
                     }}
                   >
@@ -776,7 +769,7 @@ export default function ProjectPage() {
                     style={{
                       fontFamily: ff2,
                       fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)",
-                      color: clrWhite,
+                      color: clrTitle,
                       letterSpacing: "-0.01em",
                       marginBottom: "0.75rem",
                       lineHeight: 1.1,
@@ -787,7 +780,7 @@ export default function ProjectPage() {
                   <p
                     style={{
                       fontSize: "0.92rem",
-                      color: "rgba(255,255,255,0.45)",
+                      color: clrText,
                       lineHeight: 1.7,
                     }}
                   >
@@ -822,7 +815,7 @@ export default function ProjectPage() {
             width: "600px",
             height: "300px",
             background:
-              "radial-gradient(ellipse at center, rgba(121,243,182,0.07) 0%, transparent 70%)",
+              "radial-gradient(ellipse at center, rgba(154,181,92,0.1) 0%, transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -831,7 +824,7 @@ export default function ProjectPage() {
           <p
             style={{
               fontFamily: ff2,
-              fontSize: "0.68rem",
+              fontSize: "1rem",
               textTransform: "uppercase",
               letterSpacing: "0.2em",
               color: clrGreen,
@@ -846,21 +839,21 @@ export default function ProjectPage() {
               fontSize: "clamp(2.4rem, 7vw, 6rem)",
               textTransform: "uppercase",
               letterSpacing: "-0.02em",
-              color: clrWhite,
+              color: clrTitle,
               lineHeight: 1.0,
               marginBottom: "1.5rem",
             }}
           >
             Ready to bring
             <br />
-            <span style={{ color: "rgba(255,255,255,0.2)" }}>
+            <span style={{ color: "var(--clr-dark-green)" }}>
               your ideas to life?
             </span>
           </h2>
           <p
             style={{
               fontSize: "1rem",
-              color: "rgba(255,255,255,0.4)",
+              color: clrText2,
               maxWidth: "44ch",
               margin: "0 auto 3.5rem",
               lineHeight: 1.7,
@@ -890,7 +883,7 @@ export default function ProjectPage() {
                 textTransform: "uppercase",
                 letterSpacing: "0.12em",
                 background: clrGreen,
-                color: "var(--clr-black)",
+                color: "var(--clr-white)",
                 padding: "1em 2.5em",
                 textDecoration: "none",
               }}
@@ -908,23 +901,26 @@ export default function ProjectPage() {
             </Link>
             <Link
               href="/#work"
+              className="group relative inline-flex items-center justify-start overflow-hidden"
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.75rem",
                 fontFamily: ff2,
                 fontSize: "0.72rem",
                 fontWeight: 600,
                 textTransform: "uppercase",
                 letterSpacing: "0.12em",
                 background: "transparent",
-                color: "rgba(255,255,255,0.5)",
-                border: "1px solid rgba(255,255,255,0.2)",
+                border: border,
                 padding: "1em 2.5em",
                 textDecoration: "none",
               }}
             >
-              View More Work
+              <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#9AB55C] absolute bottom-0 left-0 -translate-x-full translate-y-full mb-9 ml-9 ease-out duration-500 transition-[transform,margin] group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
+              <span
+                className="relative w-full text-left transition-colors duration-300 ease-in-out group-hover:text-[#1C1C1E]"
+                style={{ color: clrText2 }}
+              >
+                View More Work
+              </span>
             </Link>
           </div>
         </FadeIn>
@@ -944,17 +940,7 @@ export default function ProjectPage() {
           background: bg,
         }}
       >
-        <span
-          style={{
-            fontFamily: ff2,
-            fontSize: "0.8rem",
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-            color: "rgba(255,255,255,0.35)",
-          }}
-        >
-          AM<span style={{ color: clrGreen }}>.</span>
-        </span>
+        <img src="/logo.png" alt="Marrero Web Studio" style={{ height: "32px", width: "auto" }} />
         <div style={{ display: "flex", gap: "2rem" }}>
           {["About", "Work", "Services", "Contact"].map((link) => (
             <Link
@@ -965,7 +951,7 @@ export default function ProjectPage() {
                 fontFamily: ff2,
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
-                color: "rgba(255,255,255,0.25)",
+                color: clrText2,
                 textDecoration: "none",
               }}
             >
@@ -976,7 +962,7 @@ export default function ProjectPage() {
         <span
           style={{
             fontSize: "0.65rem",
-            color: "rgba(255,255,255,0.2)",
+            color: clrText2,
             letterSpacing: "0.06em",
           }}
         >

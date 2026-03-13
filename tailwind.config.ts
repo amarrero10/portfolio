@@ -9,11 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'brand-black': '#020202',
-        'brand-light-black': '#0F0F0F',
-        'brand-grey': '#3B3C3E',
-        'brand-red': '#E70000',
-        'brand-green': '#79F3B6',
+        'brand-charcoal': '#1C1C1E',
+        'brand-surface': '#252527',
+        'brand-grey': '#4A4A4D',
+        'brand-green': '#9AB55C',
+        'brand-dark-green': '#0F6424',
+        'brand-off-white': '#E1D7C9',
       },
     },
   },

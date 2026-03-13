@@ -76,7 +76,7 @@ const GridPattern = ({
   offsetY: ReturnType<typeof useMotionValue<number>>
 }) => {
   return (
-    <svg className="w-full h-full" style={{ color: '#79F3B6' }}>
+    <svg className="w-full h-full" style={{ color: '#9AB55C' }}>
       <defs>
         <motion.pattern
           id="grid-pattern"

@@ -1,28 +1,29 @@
 import type { Metadata } from 'next'
-import { Syne, Onest } from 'next/font/google'
+import { Space_Grotesk, Inter } from 'next/font/google'
 import './globals.css'
 
-const syne = Syne({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-syne',
-  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-space-grotesk',
+  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
 })
 
-const onest = Onest({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-onest',
+  variable: '--font-inter',
+  weight: ['300', '400', '500', '600'],
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio — Full Stack Web Developer',
-  description: 'Full Stack Web Developer specializing in React, Next.js, and modern web technologies.',
+  title: 'Marrero Web Studio — Full Stack Web Developer',
+  description: 'Premium, custom websites built for local businesses. Marrero Web Studio.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${syne.variable} ${onest.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   )

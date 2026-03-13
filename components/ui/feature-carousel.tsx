@@ -136,7 +136,7 @@ export function FeatureCarousel() {
 
   return (
     <div className="w-full max-w-7xl mx-auto md:p-8">
-      <div className="relative overflow-hidden rounded-[2.5rem] lg:rounded-[4rem] flex flex-col lg:flex-row min-h-[600px] lg:aspect-video border border-white/10">
+      <div className="relative overflow-hidden rounded-[2.5rem] lg:rounded-[4rem] flex flex-col lg:flex-row min-h-[600px] lg:aspect-video border border-black/10">
         {/* Left panel — nav chips */}
         <div
           className="w-full lg:w-[40%] min-h-[350px] md:min-h-[450px] lg:h-full relative z-30 flex flex-col items-start justify-center overflow-hidden px-8 md:px-16 lg:pl-16"
@@ -179,18 +179,18 @@ export function FeatureCarousel() {
                     className={cn(
                       "relative flex items-center gap-4 px-6 md:px-10 lg:px-8 py-3.5 md:py-5 lg:py-4 rounded-full transition-colors duration-700 text-left group border",
                       isActive
-                        ? "border-[#020202] z-10"
+                        ? "border-[#1C1C1E] z-10"
                         : "bg-transparent border-black/20 hover:border-black/40"
                     )}
                     style={
                       isActive
-                        ? { background: "var(--clr-black)", color: "var(--clr-green)" }
-                        : { color: "rgba(2,2,2,0.55)" }
+                        ? { background: "var(--clr-white)", color: "var(--clr-green)" }
+                        : { color: "rgba(28,28,30,0.55)" }
                     }
                   >
                     <div
                       className="flex items-center justify-center transition-colors duration-500"
-                      style={isActive ? { color: "var(--clr-green)" } : { color: "rgba(2,2,2,0.4)" }}
+                      style={isActive ? { color: "var(--clr-green)" } : { color: "rgba(28,28,30,0.4)" }}
                     >
                       <HugeiconsIcon icon={feature.icon} size={18} strokeWidth={2} />
                     </div>
@@ -209,7 +209,7 @@ export function FeatureCarousel() {
 
         {/* Right panel — cards */}
         <div
-          className="flex-1 min-h-[500px] md:min-h-[600px] lg:h-full relative flex items-center justify-center py-16 md:py-24 lg:py-16 px-6 md:px-12 lg:px-10 overflow-hidden border-t lg:border-t-0 lg:border-l border-white/10"
+          className="flex-1 min-h-[500px] md:min-h-[600px] lg:h-full relative flex items-center justify-center py-16 md:py-24 lg:py-16 px-6 md:px-12 lg:px-10 overflow-hidden border-t lg:border-t-0 lg:border-l border-black/10"
           style={{ background: "var(--clr-light-black)" }}
         >
           <div className="relative w-full max-w-[420px] aspect-[4/5] flex items-center justify-center">
@@ -261,9 +261,9 @@ export function FeatureCarousel() {
                         <div
                           className="px-4 py-1.5 rounded-full text-[11px] font-normal uppercase w-fit mb-3"
                           style={{
-                            background: "var(--clr-black)",
+                            background: "rgba(28,28,30,0.85)",
                             color: "var(--clr-green)",
-                            border: "1px solid var(--clr-border)",
+                            border: "1px solid rgba(154,181,92,0.35)",
                             fontFamily: "var(--ff-1)",
                             letterSpacing: "0.2em",
                           }}
