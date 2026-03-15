@@ -38,9 +38,9 @@ const FEATURES = [
     id: "roses-by-lina",
     label: "Floral Design Studio",
     icon: BrowserIcon,
-    image: "https://images.unsplash.com/photo-1487530811015-780c10d2dc9b?q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1740511319080-b1be1e328be5?q=80&w=1200",
     description: "Luxury floral studio site for Roses by Lina — elegant layout, bilingual support, and a custom inquiry form.",
-    url: "https://roses-by-lina.vercel.app/",
+    url: "https://roses-by-lina.vercel.app",
   },
   {
     id: "mobile",
@@ -272,7 +272,7 @@ export function FeatureCarousel() {
                         </div>
                         <p
                           className="font-normal text-xl md:text-2xl leading-tight drop-shadow-md tracking-tight mb-4"
-                          style={{ color: "var(--clr-white)", fontFamily: "var(--ff-1)" }}
+                          style={{ color: feature.id === "roses-by-lina" ? "rgba(255,255,255,0.6)" : "var(--clr-white)", fontFamily: "var(--ff-1)" }}
                         >
                           {feature.description}
                         </p>
