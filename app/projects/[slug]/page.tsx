@@ -136,59 +136,58 @@ const PROJECTS: Record<
     tags: ["React", "Node.js", "PostgreSQL", "Redis", "WebSockets"],
     url: "#",
   },
-  agency: {
-    title: "Agency Website",
-    subtitle: "Award-nominated site with immersive scroll",
-    year: "2023",
-    category: "Creative Development",
-    heroImage:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1600",
+  "roses-by-lina": {
+    title: "Roses by Lina",
+    subtitle: "Luxury floral design studio — built to bloom online",
+    year: "2024",
+    category: "Web Design & Development",
+    heroImage: "/roses-by-lina-logo.jpg",
     overview: {
-      left: "A boutique creative agency needed a digital presence that matched the quality of their output — something that would stop potential clients mid-scroll and compel them to reach out.",
+      left: "Lina needed more than a website — she needed a digital space that matched the care and artistry she puts into every arrangement. The goal was to translate the warmth of a boutique floral studio into a clean, elegant online presence that converts visitors into clients.",
       right:
-        "We delivered an immersive experience built on Next.js with GSAP-powered scroll animations, a headless CMS for easy content updates, and a custom cursor system that responds to context throughout the site.",
+        "We built a bilingual (English/Spanish) site with a custom inquiry form, an image-forward gallery, and a mobile-first layout that feels as curated as the arrangements themselves. The result is a site that communicates luxury, approachability, and trust at a glance.",
     },
     skills: [
       "Next.js",
-      "GSAP",
-      "Sanity CMS",
       "Tailwind CSS",
       "TypeScript",
-      "Three.js",
+      "Framer Motion",
+      "Web3Forms",
+      "Vercel",
+      "Responsive Design",
+      "Bilingual UI",
     ],
     siteImage:
-      "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1600",
-    wordmark: "CREATIVE",
+      "https://images.unsplash.com/photo-1490750967868-88df5691cc11?q=80&w=1600",
+    wordmark: "FLORAL",
     stats: [
-      { value: "3×", label: "Increase in Inbound Leads" },
-      { value: "8min", label: "Average Session Duration" },
-      { value: "92", label: "PageSpeed Score" },
+      { value: "100", label: "PageSpeed Score" },
+      { value: "2", label: "Languages Supported" },
+      { value: "24h", label: "Inquiry Response Time" },
     ],
     brandGuide: {
       colors: [
-        { hex: "#1A1A1A", name: "Charcoal" },
-        { hex: "#FF4D1C", name: "Flame" },
-        { hex: "#F5F5F0", name: "Ivory" },
-        { hex: "#8B5CF6", name: "Violet" },
-        { hex: "#D4D0C8", name: "Stone" },
+        { hex: "#C7A452", name: "Gold" },
+        { hex: "#FEFEFE", name: "Pearl" },
+        { hex: "#141616", name: "Midnight" },
       ],
-      fontHeading: "Space Grotesk",
-      fontBody: "Inter",
+      fontHeading: "Playfair Display",
+      fontBody: "Montserrat",
       fontHeadingDesc:
-        "Geometric display font with a technical edge, used SemiBold for strong editorial presence.",
+        "Elegant serif chosen for its romantic, editorial quality — sets a tone of luxury and timelessness.",
       fontBodyDesc:
-        "Clean, highly legible sans-serif for body text and UI elements.",
+        "Clean geometric sans-serif that pairs with Playfair to keep the UI approachable and easy to scan.",
     },
     mockupImages: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800",
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800",
+      "https://images.unsplash.com/photo-1558618047-f94aad81ce9b?q=80&w=800",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=800",
     ],
-    tags: ["Next.js", "GSAP", "Sanity CMS", "Tailwind CSS"],
-    url: "#",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel", "Bilingual"],
+    url: "https://roses-by-lina.vercel.app/",
   },
 };
 
-const FALLBACK = PROJECTS.agency;
+const FALLBACK = PROJECTS.ecommerce;
 
 // ─── FADE IN ──────────────────────────────────────────────────────────────────
 
@@ -427,16 +426,23 @@ export default function ProjectPage() {
             style={{
               maxWidth: "960px",
               margin: "0 auto",
-              borderRadius: "1.25rem",
-              overflow: "hidden",
-              border: border,
+              borderRadius: slug === "roses-by-lina" ? "0" : "1.25rem",
+              overflow: slug === "roses-by-lina" ? "visible" : "hidden",
+              border: slug === "roses-by-lina" ? "none" : border,
               aspectRatio: "16/9",
+              display: slug === "roses-by-lina" ? "flex" : "block",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <img
               src={project.heroImage}
               alt={project.title}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={
+                slug === "roses-by-lina"
+                  ? { maxWidth: "100%", maxHeight: "100%", width: "auto", height: "auto", borderRadius: "1.5rem" }
+                  : { width: "100%", height: "100%", objectFit: "cover" }
+              }
             />
           </div>
         </FadeIn>
@@ -556,11 +562,22 @@ export default function ProjectPage() {
               aspectRatio: "16/9",
             }}
           >
-            <img
-              src={project.siteImage}
-              alt={`${project.title} screenshot`}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
+            {slug === "roses-by-lina" ? (
+              <video
+                src="/Roses-by-Lina-video.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            ) : (
+              <img
+                src={project.siteImage}
+                alt={`${project.title} screenshot`}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            )}
           </div>
         </FadeIn>
       </section>

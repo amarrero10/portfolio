@@ -35,12 +35,12 @@ const FEATURES = [
     url: "#",
   },
   {
-    id: "agency",
-    label: "Agency Website",
+    id: "roses-by-lina",
+    label: "Floral Design Studio",
     icon: BrowserIcon,
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1200",
-    description: "Award-nominated agency site with immersive scroll animations and headless CMS integration.",
-    url: "#",
+    image: "https://images.unsplash.com/photo-1487530811015-780c10d2dc9b?q=80&w=1200",
+    description: "Luxury floral studio site for Roses by Lina — elegant layout, bilingual support, and a custom inquiry form.",
+    url: "https://roses-by-lina.vercel.app/",
   },
   {
     id: "mobile",
