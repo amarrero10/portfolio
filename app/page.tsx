@@ -621,9 +621,15 @@ function Stats() {
             }}
           >
             <img
-              src="https://placehold.co/800x600/D4C9B8/1C1C1E?text=Developer+at+Work"
-              alt="Developer at work"
-              style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.85 }}
+              src="/portrait.jpeg"
+              alt="Developer portrait"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center top",
+                opacity: 0.85,
+              }}
             />
             <div
               style={{
@@ -1521,7 +1527,10 @@ function CTA() {
 
 function Footer() {
   const navLinks = ["About", "Work", "Services", "Technologies", "Contact"];
-  const socialLinks = ["GitHub", "LinkedIn", "Twitter / X", "Dribbble"];
+  const socialLinks = [
+    { label: "GitHub", href: "https://github.com/amarrero10" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/albert-marrero-it/" },
+  ];
   const wordmarkRef = useRef<HTMLDivElement>(null);
   const wordmarkInView = useInView(wordmarkRef, { once: true, amount: 0.5 });
 
@@ -1631,9 +1640,11 @@ function Footer() {
             </div>
             <ul style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
               {socialLinks.map((link) => (
-                <li key={link}>
+                <li key={link.label}>
                   <a
-                    href="#"
+                    href={link.href}
+                    target={link.href !== "#" ? "_blank" : undefined}
+                    rel={link.href !== "#" ? "noopener noreferrer" : undefined}
                     style={{
                       fontFamily: "var(--ff-1)",
                       fontSize: "var(--text-xs)",
@@ -1645,7 +1656,7 @@ function Footer() {
                     onMouseEnter={(e) => (e.currentTarget.style.color = "var(--clr-white)")}
                     onMouseLeave={(e) => (e.currentTarget.style.color = "var(--clr-text-2)")}
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}

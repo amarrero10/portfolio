@@ -128,8 +128,13 @@ function InfoItem({ label, value, href }: { label: string; value: string; href?:
     <a
       href={href}
       style={sharedStyle}
-      onMouseEnter={(e) => ((e.currentTarget.querySelector("span:last-child") as HTMLElement).style.color = clrDarkGreen)}
-      onMouseLeave={(e) => ((e.currentTarget.querySelector("span:last-child") as HTMLElement).style.color = clrTitle)}
+      onMouseEnter={(e) =>
+        ((e.currentTarget.querySelector("span:last-child") as HTMLElement).style.color =
+          clrDarkGreen)
+      }
+      onMouseLeave={(e) =>
+        ((e.currentTarget.querySelector("span:last-child") as HTMLElement).style.color = clrTitle)
+      }
     >
       {content}
     </a>
@@ -315,7 +320,35 @@ export default function ContactPage() {
               maxWidth: "48ch",
             }}
           >
-            {["Have", "a", "project", "in", "mind?", "Tell", "me", "about", "it.", "I'll", "get", "back", "to", "you", "within", "24", "hours", "to", "discuss", "how", "we", "can", "bring", "your", "vision", "to", "life."].map((word, i) => (
+            {[
+              "Have",
+              "a",
+              "project",
+              "in",
+              "mind?",
+              "Tell",
+              "me",
+              "about",
+              "it.",
+              "I'll",
+              "get",
+              "back",
+              "to",
+              "you",
+              "within",
+              "24",
+              "hours",
+              "to",
+              "discuss",
+              "how",
+              "we",
+              "can",
+              "bring",
+              "your",
+              "vision",
+              "to",
+              "life.",
+            ].map((word, i) => (
               <span
                 key={word + i}
                 className="contact-word-animate"
@@ -407,11 +440,17 @@ export default function ContactPage() {
               </div>
 
               {/* Social links */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "0.5rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.75rem",
+                  marginTop: "0.5rem",
+                }}
+              >
                 {[
-                  { label: "LinkedIn", href: "#" },
-                  { label: "GitHub", href: "#" },
-                  { label: "Twitter / X", href: "#" },
+                  { label: "LinkedIn", href: "https://www.linkedin.com/in/albert-marrero-it/" },
+                  { label: "GitHub", href: "https://github.com/amarrero10" },
                 ].map(({ label, href }) => (
                   <a
                     key={label}
@@ -475,7 +514,13 @@ export default function ContactPage() {
                     }}
                   >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M4 12L9 17L20 6" stroke="#9AB55C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <path
+                        d="M4 12L9 17L20 6"
+                        stroke="#9AB55C"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -492,8 +537,17 @@ export default function ContactPage() {
                     >
                       Message Sent
                     </p>
-                    <p style={{ fontFamily: ff1, fontSize: "0.9rem", color: clrText, lineHeight: "1.65", maxWidth: "36ch" }}>
-                      Thank you for reaching out. I'll be in touch within 24 hours to discuss your project.
+                    <p
+                      style={{
+                        fontFamily: ff1,
+                        fontSize: "0.9rem",
+                        color: clrText,
+                        lineHeight: "1.65",
+                        maxWidth: "36ch",
+                      }}
+                    >
+                      Thank you for reaching out. I'll be in touch within 24 hours to discuss your
+                      project.
                     </p>
                   </div>
                   <button
@@ -598,9 +652,15 @@ export default function ContactPage() {
                           paddingRight: "2.5rem",
                         }}
                       >
-                        <option value="" disabled>Select a range</option>
+                        <option value="" disabled>
+                          Select a range
+                        </option>
                         {budgetOptions.map((opt) => (
-                          <option key={opt} value={opt} style={{ background: "#D4C9B8", color: "#1C1C1E" }}>
+                          <option
+                            key={opt}
+                            value={opt}
+                            style={{ background: "#D4C9B8", color: "#1C1C1E" }}
+                          >
                             {opt}
                           </option>
                         ))}
@@ -643,14 +703,24 @@ export default function ContactPage() {
                       }}
                     >
                       Something went wrong. Please try emailing directly at{" "}
-                      <a href="mailto:albert.marrero10@gmail.com" style={{ color: "inherit", textDecoration: "underline" }}>
+                      <a
+                        href="mailto:albert.marrero10@gmail.com"
+                        style={{ color: "inherit", textDecoration: "underline" }}
+                      >
                         albert.marrero10@gmail.com
                       </a>
                     </p>
                   )}
 
                   {/* Submit */}
-                  <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1.5rem",
+                      flexWrap: "wrap",
+                    }}
+                  >
                     <button
                       type="submit"
                       disabled={formState === "sending"}
@@ -720,7 +790,11 @@ export default function ContactPage() {
           }}
         >
           <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-            <img src="/logo.png" alt="Marrero Web Studio" style={{ height: "32px", width: "auto" }} />
+            <img
+              src="/logo.png"
+              alt="Marrero Web Studio"
+              style={{ height: "32px", width: "auto" }}
+            />
           </Link>
           <p
             style={{
