@@ -1486,7 +1486,7 @@ function CTA() {
           </p>
 
           <a
-            href="mailto:albert.marrero10@gmail.com"
+            href="mailto:amarrero@albert-dev.com"
             className="inline-flex items-center gap-3"
             style={{
               fontFamily: "var(--ff-1)",
@@ -1571,7 +1571,7 @@ function Footer() {
               Building exceptional digital experiences.
             </p>
             <a
-              href="mailto:albert.marrero10@gmail.com"
+              href="mailto:amarrero@albert-dev.com"
               style={{
                 fontFamily: "var(--ff-1)",
                 fontSize: "var(--text-xs)",
@@ -1583,7 +1583,7 @@ function Footer() {
               onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
               onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
-              albert.marrero10@gmail.com
+              amarrero@albert-dev.com
             </a>
           </div>
 

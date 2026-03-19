@@ -394,8 +394,8 @@ export default function ContactPage() {
               <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem" }}>
                 <InfoItem
                   label="Email"
-                  value="albert.marrero10@gmail.com"
-                  href="mailto:albert.marrero10@gmail.com"
+                  value="amarrero@albert-dev.com"
+                  href="mailto:amarrero@albert-dev.com"
                 />
                 <InfoItem label="Location" value="Available Worldwide" />
                 <InfoItem label="Response Time" value="Within 24 hours" />
@@ -704,10 +704,10 @@ export default function ContactPage() {
                     >
                       Something went wrong. Please try emailing directly at{" "}
                       <a
-                        href="mailto:albert.marrero10@gmail.com"
+                        href="mailto:amarrero@albert-dev.com"
                         style={{ color: "inherit", textDecoration: "underline" }}
                       >
-                        albert.marrero10@gmail.com
+                        amarrero@albert-dev.com
                       </a>
                     </p>
                   )}
