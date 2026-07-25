@@ -32,109 +32,103 @@ const PROJECTS: Record<
     url: string;
   }
 > = {
-  ecommerce: {
-    title: "E-Commerce Platform",
-    subtitle: "Full-featured online store built for scale",
-    year: "2024",
-    category: "Web Development",
-    heroImage:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1600",
+  terragold: {
+    title: "TerraGold Construction",
+    subtitle: "Construction & exterior experts for the Tampa Bay Area",
+    year: "2025",
+    category: "Web Design & Development",
+    heroImage: "/terragold-screenshot.png",
     overview: {
-      left: "A complete e-commerce solution designed for a fast-growing retail brand. The brief called for a seamless shopping experience that could handle high traffic while maintaining a premium feel throughout the purchase journey.",
+      left: "TerraGold Construction Services needed a site that could match the quality of their in-house craftsmanship — stucco, drywall, siding, and stone veneer work handled start to finish without subcontractors. The brief called for a bold, trustworthy presence that turns homeowners browsing services into free-estimate requests.",
       right:
-        "We delivered a Next.js storefront with real-time inventory sync, Stripe payment processing, and a custom admin dashboard. The result: a 40% increase in conversion rate and a 60% reduction in cart abandonment within the first quarter.",
+        "We built a fast, mobile-first marketing site with a striking black-and-gold identity, a clear services breakdown, and a prominent estimate CTA on every page. The result is a site that reflects 15+ years of licensed, insured, family-owned craftsmanship at a glance.",
     },
     skills: [
       "Next.js",
-      "TypeScript",
-      "Stripe API",
-      "PostgreSQL",
       "Tailwind CSS",
-      "Prisma ORM",
-      "Redis",
+      "TypeScript",
+      "Framer Motion",
+      "Responsive Design",
+      "Lead Generation",
       "Vercel",
+      "SEO",
     ],
-    siteImage:
-      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1600",
-    wordmark: "COMMERCE",
+    siteImage: "/terragold-screenshot.png",
+    wordmark: "TERRAGOLD",
     stats: [
-      { value: "40%", label: "Conversion Rate Increase" },
-      { value: "60%", label: "Cart Abandonment Reduction" },
-      { value: "2.1s", label: "Average Page Load" },
+      { value: "14+", label: "Years of Experience" },
+      { value: "496+", label: "Projects Completed" },
+      { value: "0", label: "Subcontractors Used" },
     ],
     brandGuide: {
       colors: [
-        { hex: "#0A0A0A", name: "Obsidian" },
-        { hex: "#F5F0EB", name: "Cream" },
-        { hex: "#C8A97E", name: "Gold" },
-        { hex: "#3D3530", name: "Walnut" },
-        { hex: "#E8E0D5", name: "Linen" },
+        { hex: "#0B0B0B", name: "Onyx" },
+        { hex: "#F0EDE0", name: "Stone Cream" },
+        { hex: "#C9A227", name: "Gold" },
+        { hex: "#1C1C1C", name: "Charcoal" },
+        { hex: "#8A7A4E", name: "Bronze" },
       ],
-      fontHeading: "Playfair Display",
-      fontBody: "DM Sans",
+      fontHeading: "Anton",
+      fontBody: "Inter",
       fontHeadingDesc:
-        "Elegant serif for headlines, conveying trust and premium quality.",
+        "Bold, condensed uppercase sans-serif that reads like a job-site sign — direct, sturdy, and unmistakably confident.",
       fontBodyDesc:
-        "Clean geometric sans-serif for body text, ensuring readability at scale.",
+        "Clean, neutral sans-serif for service descriptions and estimates, prioritizing clarity over flourish.",
     },
     mockupImages: [
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800",
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800",
+      "/terragold-screenshot.png",
     ],
-    tags: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
-    url: "#",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel", "SEO"],
+    url: "https://www.terragoldconstruction.com/",
   },
-  saas: {
-    title: "SaaS Dashboard",
-    subtitle: "Real-time analytics for a Series A fintech",
-    year: "2024",
-    category: "Product Design & Development",
-    heroImage:
-      "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=1600",
+  "aura-wellness": {
+    title: "Aura Wellness",
+    subtitle: "Tampa Bay's medical aesthetics & wellness destination",
+    year: "2025",
+    category: "Web Design & Development",
+    heroImage: "/aura-wellness-screenshot.png",
     overview: {
-      left: "A Series A fintech startup needed a data visualization platform that could surface insights across millions of transactions without overwhelming their non-technical users.",
+      left: "Aura Wellness offers medical weight loss, CoolSculpting, and hormone therapy led by a board-certified nurse practitioner. The goal was a site that felt as calm and premium as the treatments themselves, while making it effortless to book a consultation.",
       right:
-        "We built a real-time dashboard with customizable widgets, role-based access controls, and automated reporting. The platform now serves 50+ enterprise clients and processes over 2M daily events.",
+        "We designed a moody, editorial dark theme with warm gold accents and elegant serif typography, paired with clear service pages and a persistent appointment CTA. Telehealth availability and real testimonials build trust before a visitor ever picks up the phone.",
     },
     skills: [
-      "React",
-      "Node.js",
-      "PostgreSQL",
-      "Redis",
-      "WebSockets",
-      "D3.js",
-      "Docker",
-      "AWS",
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Framer Motion",
+      "Appointment Booking",
+      "Telehealth UX",
+      "Vercel",
+      "Responsive Design",
     ],
-    siteImage:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
-    wordmark: "ANALYTICS",
+    siteImage: "/aura-wellness-screenshot.png",
+    wordmark: "AURA",
     stats: [
-      { value: "50+", label: "Enterprise Clients" },
-      { value: "2M+", label: "Daily Events Processed" },
-      { value: "99.9%", label: "Uptime SLA" },
+      { value: "3", label: "Core Treatment Lines" },
+      { value: "100%", label: "Telehealth Ready" },
+      { value: "24h", label: "Consultation Response" },
     ],
     brandGuide: {
       colors: [
-        { hex: "#0F1729", name: "Navy" },
-        { hex: "#1E3A5F", name: "Ocean" },
-        { hex: "#3B82F6", name: "Sapphire" },
-        { hex: "#F8FAFC", name: "Frost" },
-        { hex: "#64748B", name: "Slate" },
+        { hex: "#0F140D", name: "Deep Moss" },
+        { hex: "#C9A227", name: "Champagne Gold" },
+        { hex: "#F5F1E8", name: "Ivory" },
+        { hex: "#1C2418", name: "Forest" },
+        { hex: "#8C8577", name: "Sage Grey" },
       ],
-      fontHeading: "Inter",
-      fontBody: "IBM Plex Mono",
+      fontHeading: "Cormorant Garamond",
+      fontBody: "Inter",
       fontHeadingDesc:
-        "Neutral, data-focused sans-serif for clarity in complex interfaces.",
+        "Elegant serif with an italic accent variant, giving the brand a boutique, spa-like warmth.",
       fontBodyDesc:
-        "Monospace for data density, code references, and technical precision.",
+        "Clean, legible sans-serif for treatment details and scheduling, keeping the clinical information easy to scan.",
     },
     mockupImages: [
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800",
-      "https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=800",
+      "/aura-wellness-screenshot.png",
     ],
-    tags: ["React", "Node.js", "PostgreSQL", "Redis", "WebSockets"],
-    url: "#",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel", "Telehealth UX"],
+    url: "https://aura-wellness-black.vercel.app/",
   },
   "roses-by-lina": {
     title: "Roses by Lina",
@@ -187,7 +181,7 @@ const PROJECTS: Record<
   },
 };
 
-const FALLBACK = PROJECTS.ecommerce;
+const FALLBACK = PROJECTS.terragold;
 
 // ─── FADE IN ──────────────────────────────────────────────────────────────────
 
@@ -311,7 +305,7 @@ export default function ProjectPage() {
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
                 background: clrGreen,
-                color: "var(--clr-black)",
+                color: "var(--clr-white)",
                 padding: "0.55em 1.3em",
                 textDecoration: "none",
               }}

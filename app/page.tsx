@@ -119,7 +119,7 @@ function Navbar() {
             textTransform: "uppercase",
             letterSpacing: "0.1em",
             background: "var(--clr-green)",
-            color: "var(--clr-black)",
+            color: "var(--clr-white)",
             padding: "0.6em 1.4em",
             transition: "opacity var(--transition-1)",
           }}
@@ -324,7 +324,7 @@ function Hero() {
                 textTransform: "uppercase",
                 letterSpacing: "0.1em",
                 background: "var(--clr-green)",
-                color: "var(--clr-black)",
+                color: "var(--clr-white)",
                 padding: "0.85em 2em",
                 transition: "gap var(--transition-1), opacity var(--transition-1)",
               }}
@@ -1495,7 +1495,7 @@ function CTA() {
               textTransform: "uppercase",
               letterSpacing: "0.1em",
               background: "var(--clr-green)",
-              color: "var(--clr-black)",
+              color: "var(--clr-white)",
               padding: "0.9em 2.5em",
               transition: "opacity var(--transition-1), gap var(--transition-1)",
             }}
